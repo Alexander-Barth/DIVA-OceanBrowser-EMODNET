@@ -139,6 +139,22 @@ the bottom surface
 * Correlation length is adapted to avoid the extrapolation of the observation to areas with a different bottom depth
 * Advection constrain takes the orientation of the bathymetric slope into account
 
+
+---
+# Time series
+
+<img style="float:right; padding: 10px;" src="Fig/Temperature_L1_19002012_0707_0m_lc=0-7_snr=1-0_field_contour_no_weighting-bis.png" width="230">
+<img style="float:right; padding: 10px;"  src="Fig/Temperature_L1_19002012_0707_0m_lc=0-7_snr=1-0_field_contour_with_weighting-bis.png" width="230">
+* The  data  weighting  decrease  the
+weight of close-by observations in the analysis.
+* Necessary for time series
+* Weight are based on space and time distance
+* SST analyses over the Baltic Sea  without
+(left) and with (right) data weighting. 
+* These analyses use in situ data over July
+1900–2012
+
+
 ---
 # divadoxml-gui
 
@@ -330,9 +346,10 @@ docker run -p 8080:80 --name my-oceanbrowser-container \
 # Summary
 
 * DIVA adapted to the needs of EMODNET Chemistry, a.o.
- * cut the analysis spatially (useful when domains overlap)
- * weight time series
- * handle very large NetCDF files
+ * Reduce the weight of __time series__
+ * __Analysis near the ocean floor__
+ * Cut the analysis spatially (useful when domains overlap)
+ * Handle very large NetCDF files
 * OceanBrowser allows the visualization of gridded data sets:
  * along a __horizontal section__ (at given time and depth)
  * along a __vertical section__ (e.g. at a fixed distance from coast)
@@ -341,13 +358,10 @@ docker run -p 8080:80 --name my-oceanbrowser-container \
  * Subset via __OPeNDAP__
  * __Image__ export (PNG, EPS, SVG, ...)
  * __Animation__ export (webm, mp4)
-* HTTP cache control headers work well with the Web Map Service standard
-* Installation simplified using docker
-* __Open source__ (AGPL) and based on python and matplotlib
+* Installation and __migration to CINECA__ simplified using docker
 * Using on OGC standards (WMS, WFS and NetCDF)
 * __Density of observations__ (for a specified depth and time range)
  * time series, profile plots
-* Ability to show __profile__ and __time series plots__
 
     </textarea>
     <script src="remark-latest.min.js" type="text/javascript"></script>
