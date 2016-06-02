@@ -116,6 +116,29 @@ Full list at:
 http://modb.oce.ulg.ac.be/mediawiki/index.php/New_Diva_Features
 
 
+
+---
+# Bottom analysis
+
+<div style="float:right; width: 250px" >
+<img src="Fig/bottomtest.png" width="200">
+<br>
+Vertical layers
+<br>
+<img src="Fig/RL7new.png" width="200">
+<br>
+Relative correlation length based on gradient
+</div>
+* Previously, the analyses were performed   at   several   depths
+counted from the ocean surface
+* Result was then combined in a "deepest variable"
+field using for each grid point
+the deepest result available.
+* In the last DIVA version: computation of the layers from several user-defined distances from
+the bottom surface
+* Correlation length is adapted to avoid the extrapolation of the observation to areas with a different bottom depth
+* Advection constrain takes the orientation of the bathymetric slope into account
+
 ---
 # divadoxml-gui
 
@@ -375,5 +398,7 @@ docker run -p 8080:80 --name my-oceanbrowser-container \
  -->
 <!--  LocalWords:  oceanbrowser abarth localhost webm AGPL matplotlib
  -->
-<!--  LocalWords:  WMS WFS
+<!--  LocalWords:  WMS WFS representativity netCDF divacutNCDF gui
+ -->
+<!--  LocalWords:  EMODnet Advection bathymetric divadoxml CDIs
  -->
