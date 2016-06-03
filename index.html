@@ -93,20 +93,30 @@ Gerrit Hendriksen³ and Jean-Marie&nbsp;Beckers¹
  * consistent __error variance estimation__
 
 ---
-# New features of DIVA
+# New Features in DIVA
+## DIVA 4.6.10
 
 
+<img style="float:right; padding: 10px;" src="Fig/Temperature_L1_19002012_0707_0m_lc=0-7_snr=1-0_field_contour_no_weighting-bis.png" width="230">
+<img style="float:right; padding: 10px;"  src="Fig/Temperature_L1_19002012_0707_0m_lc=0-7_snr=1-0_field_contour_with_weighting-bis.png" width="230">
+* The  data  weighting  __decrease  the
+weight of close-by observations__ in the analysis.
+* Necessary for __time series__
+* Weight are based on space and time distance
+* SST analyses over the Baltic Sea  without
+(left) and with (right) data weighting. 
+* These analyses use in situ data over July
+1900–2012
+* __Extraction of topography from GEBCO__ more robust and accurate.
 
-## 4.6.10
- * For close measurements (space and time), the representativity errors can be adapted via a __weighting option__. Particularly suited for time series.
- * __Extraction of topography from GEBCO__ more robust and accurate.
 
+---
 
-## 4.6.11 (current)
+## DIVA 4.6.11 (current)
  * Creation of very __large 4D netCDF files__ (> 2Go)
  * divacutNCDF: __cut the domain__ of your final NetCDF
 
-## 4.7.1 (upcoming)
+## DIVA 4.7.1 (upcoming)
 
  * __Bottom analysis__: the distance is counted from the bottom ocean, derived from the interpolation of the topography.
  * __Variable correlation length__ depending on the gradient of the depth for bottom analyses
@@ -147,20 +157,6 @@ the bottom surface
 * Impact of spatially variable correlation length
 * Correlation length is reduced based on topography gradient (panel right) compared to a uniform correlation length (left panel)
 
-
----
-# Time series
-
-<img style="float:right; padding: 10px;" src="Fig/Temperature_L1_19002012_0707_0m_lc=0-7_snr=1-0_field_contour_no_weighting-bis.png" width="230">
-<img style="float:right; padding: 10px;"  src="Fig/Temperature_L1_19002012_0707_0m_lc=0-7_snr=1-0_field_contour_with_weighting-bis.png" width="230">
-* The  data  weighting  decrease  the
-weight of close-by observations in the analysis.
-* Necessary for time series
-* Weight are based on space and time distance
-* SST analyses over the Baltic Sea  without
-(left) and with (right) data weighting. 
-* These analyses use in situ data over July
-1900–2012
 
 
 ---
